@@ -116,6 +116,6 @@ function showScores() {
 function resetBall() {
   ball.x = width / 2;
   ball.y = height / 2;
-  ball.xSpeed = random(-5, 5);
+  this.xSpeed = Math.random() < 0.5 ? -5 : 5;
   ball.ySpeed = random(-5, 5);
 }
