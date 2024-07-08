@@ -59,7 +59,15 @@ class Paddle {
   }
 
   follow(ball) {
-    this.y = ball.y - this.height / 2;
+    let targetY = ball.y - this.height / 2;
+    let error = random(-30, 30); // Add some randomness to the AI's accuracy
+    targetY += error;
+  
+    // Add a delay to the AI's reaction
+    if (frameCount % 5 === 0) { // Adjust every 5 frames
+      this.y += (targetY - this.y) * 0.1; // Gradually move towards the target
+    }
+  
     this.y = constrain(this.y, 0, height - this.height);
   }
 }
@@ -119,3 +127,4 @@ function resetBall() {
   this.xSpeed = Math.random() < 0.5 ? -5 : 5;
   ball.ySpeed = random(-5, 5);
 }
+
