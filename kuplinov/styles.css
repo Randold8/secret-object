@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color:#F1F1F1;
+    background-color: #0F0F0F;
+}
+
+header {
+    background-color: #0F0F0F;
+    text-align: center;
+    margin-top: 2vh;
+}
+.scrolling-background {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Adjust as needed */
+  overflow: hidden;
+}
+
+.scrolling-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('img/kupbanner.jpg');
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  animation: scroll-background 30s linear infinite;
+}
+
+.scrolling-image:last-child {
+  left: 100%;
+}
+
+@keyframes scroll-background {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+  
+  
+
+header h1 {
+    margin: 0;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    background-color: #0F0F0F;
+    height:100%;
+}
+.title-section {    
+    height:3vh;
+}
+#kuplahead {
+    border-radius: 100px;
+    position:relative   ;
+    top:-12vh;
+
+}
+#featured-video {
+    height:35vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+#latest-video {
+    width:55vw;
+    height: 30vh;
+    overflow: hidden;
+    position: relative;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+  }
+  
+  #youtube-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: transform 1s ease-out;
+  }
+  
+  #latest-video::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+    pointer-events: none;
+  }
+  
+  #latest-video.animate #youtube-video {
+    transform: translateY(0);
+  }
+  
+  #latest-video.animate::after {
+    opacity: 0;
+  }
+  
+  
+  
+
+footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
