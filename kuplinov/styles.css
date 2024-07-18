@@ -139,6 +139,7 @@ main {
 .title {
     font-size:calc(2vh + 2vw);
     margin-bottom: 0;
+    margin-top:8vh;
 }
 .title-description{
     color:#999999;
