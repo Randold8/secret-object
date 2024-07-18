@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTuber Fansite</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/youtube-sans" rel="stylesheet">
+                
 </head>
 <body>
+    <div id="circle"></div>
+    <img id="arrow1" src="img/arrow.png" alt="Red arrow">
+    <img id="arrow2" src="img/arrow.png" alt="Red arrow">
+
     <header>
         <div class="scrolling-background">
-            <div class="scrolling-image"></div>
             <div class="scrolling-image"></div>
           </div>
     </header>
@@ -19,13 +24,40 @@
             <img src="img/kupla.jpg" id="kuplahead">
         </section>
         <section id="featured-video">
-            <h2>Последнее видео:</h2>
+            <div class="intro-text">
+                <h1 class="title">Фансайт Kuplinov ► Play</h2>
+                <p class="title-description">@kuplinovplay • 16,8 млн подписчиков • 6,8 тыс. видео</p>
+                <nav>
+                    <div class="navitem">
+                        <img src="img/vk-gray.png">
+                        <a href="https://vk.com/dmitry.kuplinov">vk.com/dmitry.kuplinov</a>
+                    </div>
+                    <div class="navitem">
+                        <img src="img/tg-gray.png">
+                        <a href="https://t.me/Kuplinov_Telegram">t.me/Kuplinov_Telegram</a>
+                    </div>
+                    <div class="navitem">
+                        <img src="img/web.png">
+                        <a href="mailto:kuplinov.partnership@mail.ru">kuplinov.partnership@mail.ru</a>
+                    </div>
+                </nav>
+            </div>
             <div id="latest-video">
                 <iframe  id="youtube-video" width="100%" height="200%" src="https://www.youtube.com/embed/lXWQIC5KDbQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <img src="img/lastvideo2.png" class="lastvideo">
             </div>
         </section>
+        <section id="history">
+            <img src="img/kupligallery.png" class="history-illustration">
+            <div class="history-info">
+                <h2>Кто такой Дмитрий Куплинов?</h2>
+                <p>Дми́трий Алексе́евич Куплинóв (род. 25 ноября 1988, Оренбург, СССР) — российский ютубер, летсплейщик и стример. Создатель и владелец каналов «Kuplinov ► Play» на YouTube, Twitch и VK Play. </p>
+            </div>
+        </section>
+
     </main>
     <script src="turn.js"></script>
     <script src="videos.js"></script>
+    <script src="circle.js"></script>
 </body>
 </html>
