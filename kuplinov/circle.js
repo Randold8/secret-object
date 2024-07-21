@@ -1,3 +1,4 @@
+
 const circle = document.getElementById('circle');
 const screenWidth = window.innerWidth;
 const circleWidth = circle.offsetWidth;
